@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Journey-of-Outcast"
+config/name="Journey of Outcast"
+run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
