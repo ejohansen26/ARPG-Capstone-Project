@@ -11,8 +11,59 @@ script = ExtResource("1_xo71u")
 [node name="Skeleton_Warrior" parent="." instance=ExtResource("1_htjdc")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
+[node name="Skeleton3D" parent="Skeleton_Warrior/Rig" index="0"]
+bones/0/position = Vector3(-0.368346, -3.10329, 5.83735e-08)
+bones/0/rotation = Quaternion(3.7446e-08, 1.5538e-07, -0.31412, 0.949383)
+bones/1/position = Vector3(-1.19209e-07, 0.392064, -2.84217e-14)
+bones/1/rotation = Quaternion(-9.32189e-10, 0.0431578, -1.49151e-08, 0.999068)
+bones/2/rotation = Quaternion(1.86265e-09, 2.32831e-09, -2.23517e-08, 1)
+bones/3/rotation = Quaternion(-1.24077e-24, 4.65661e-10, -2.23517e-08, 1)
+bones/4/position = Vector3(0.212007, 0.134132, 4.82949e-08)
+bones/4/rotation = Quaternion(-0.559906, -0.0608809, -0.643975, 0.517778)
+bones/5/rotation = Quaternion(8.77467e-08, -6.52126e-08, -0.494717, 0.869054)
+bones/6/rotation = Quaternion(-4.01996e-09, 7.05018e-09, 0.0266581, 0.999645)
+bones/7/rotation = Quaternion(-0.321066, -0.325318, 0.145725, 0.87741)
+bones/8/position = Vector3(8.34886e-10, 0.0961254, -0.0575)
+bones/8/rotation = Quaternion(1.34636e-08, 1.08294e-08, -0.707107, 0.707107)
+bones/9/position = Vector3(-0.723216, 0.0313707, -0.044249)
+bones/9/rotation = Quaternion(-0.508144, 0.801097, 0.100649, -0.299841)
+bones/10/rotation = Quaternion(6.78635e-08, 4.13371e-08, 0.413123, 0.910675)
+bones/11/rotation = Quaternion(-9.73784e-11, 2.98437e-10, -0.0266581, 0.999645)
+bones/12/rotation = Quaternion(0.117048, -0.896351, 0.163327, 0.395196)
+bones/13/position = Vector3(1.50256e-08, -0.407898, 0.39729)
+bones/13/rotation = Quaternion(0.164252, 0.897875, 0.391903, -0.115126)
+bones/14/rotation = Quaternion(-0.0525261, -0.00510249, 0.0972283, 0.993862)
+bones/16/position = Vector3(0.170945, 0.113587, 2.13694e-08)
+bones/16/rotation = Quaternion(0.993715, 0.0837146, 0.0735037, 0.0109185)
+bones/17/rotation = Quaternion(0.195602, 6.72559e-08, -1.8441e-07, 0.980683)
+bones/18/rotation = Quaternion(-0.517564, -0.209497, 0.0436546, 0.828452)
+bones/19/rotation = Quaternion(0.000111669, 0.920258, -0.391312, -2.48954e-05)
+bones/20/rotation = Quaternion(0.997322, -0.0294576, 0.0315294, 0.0590488)
+bones/21/rotation = Quaternion(0.274009, -6.24522e-08, 1.44431e-07, 0.961727)
+bones/22/rotation = Quaternion(-0.55904, 0.114512, -0.00862881, 0.82115)
+bones/23/rotation = Quaternion(-9.01042e-05, 0.920222, -0.391398, 2.07985e-05)
+bones/24/rotation = Quaternion(0.707107, -2.29302e-07, -4.60552e-08, 0.707107)
+bones/25/position = Vector3(0.202182, 0.0259903, 0.205181)
+bones/25/rotation = Quaternion(-0.707107, -7.05285e-08, -7.05285e-08, 0.707107)
+bones/26/position = Vector3(1.94581e-08, 0.362833, -2.38419e-07)
+bones/26/rotation = Quaternion(1.51171e-08, 1.71474e-09, 0.985719, -0.168398)
+bones/27/rotation = Quaternion(-1.04035e-07, 0.391084, 0.920355, -2.9526e-08)
+bones/29/rotation = Quaternion(1, -3.10863e-15, 1.94707e-07, -6.91739e-22)
+bones/31/rotation = Quaternion(0.707107, -3.82385e-08, 1.45009e-07, 0.707107)
+bones/32/rotation = Quaternion(-0.707107, -7.05285e-08, -7.05285e-08, 0.707107)
+bones/33/position = Vector3(1.94581e-08, 0.362833, -2.38419e-07)
+bones/33/rotation = Quaternion(1.49789e-08, 6.20387e-10, 0.994809, 0.101756)
+bones/34/rotation = Quaternion(-1.04035e-07, 0.391084, 0.920355, -2.95261e-08)
+bones/36/rotation = Quaternion(1, -7.45058e-09, 2.02158e-07, -7.45058e-09)
+bones/38/position = Vector3(0.453507, 1.10676, -0.588859)
+bones/39/position = Vector3(0.520841, 0.788312, -0.0576373)
+bones/39/rotation = Quaternion(0.794627, -6.70552e-08, 0.607098, -1.3411e-07)
+bones/40/position = Vector3(-0.795779, 0.213517, 0.229687)
+bones/41/position = Vector3(-0.965183, 1.35294, 0.15812)
+bones/41/rotation = Quaternion(0.0312644, 0.706415, -0.0312643, 0.706415)
+
 [node name="Skeleton_Warrior_Helmet" parent="Skeleton_Warrior/Rig/Skeleton3D" index="0"]
-transform = Transform3D(1, -2.20965e-22, 1.69407e-21, 2.20965e-22, 1, 0, -1.69407e-21, 3.58732e-43, 1, 0, 1.21587, -1.35973e-07)
+transform = Transform3D(0.900092, 0.420459, 0.114235, -0.427394, 0.902996, 0.0439555, -0.084672, -0.0883872, 0.992481, 0.353234, -2.14084, 0.00225842)
 
 [node name="HitDetector" type="Area3D" parent="."]
 
@@ -26,5 +77,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22175, 0)
 [node name="MainCollision" type="CollisionShape3D" parent="."]
 transform = Transform3D(2.25, 0, 0, 0, 2.25, 0, 0, 0, 2.25, 0, 2.25, 0)
 shape = SubResource("CylinderShape3D_jdrfb")
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_entered"]
 
 [editable path="Skeleton_Warrior"]

@@ -52,7 +52,7 @@ transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -
 shadow_enabled = true
 
 [node name="MainCamera" type="Camera3D" parent="." node_paths=PackedStringArray("target")]
-transform = Transform3D(-1, 6.18172e-08, -6.18172e-08, 0, 0.707107, 0.707107, 8.74228e-08, 0.707107, -0.707107, 13.89, 0, -6.255)
+transform = Transform3D(-1, -7.57104e-08, 4.37114e-08, 0, 0.5, 0.866026, -8.74228e-08, 0.866026, -0.5, 13.89, 0, -6.255)
 script = ExtResource("1_ck7x8")
 target = NodePath("../Player/CameraPositionTarget")
 lerp_speed = 0.25
@@ -63,17 +63,147 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.89, 0, -6.255)
 [node name="Knight" parent="Player" index="0"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
+[node name="1H_Sword_Offhand" parent="Player/Knight/Rig/Skeleton3D" index="0"]
+transform = Transform3D(2.65221e-08, 0.262865, 0.964832, 0.999999, -5.33634e-07, 5.38426e-07, 8.70782e-07, 0.964832, -0.262865, 0.51224, 0.636705, -0.00210784)
+
+[node name="Badge_Shield" parent="Player/Knight/Rig/Skeleton3D" index="1"]
+transform = Transform3D(4.89419e-08, 0.262864, 0.964832, 0.999999, -3.06881e-06, 1.20589e-06, 3.49226e-06, 0.964832, -0.262864, 0.662643, 0.636706, -0.0430846)
+
+[node name="Rectangle_Shield" parent="Player/Knight/Rig/Skeleton3D" index="2"]
+transform = Transform3D(4.89419e-08, 0.262864, 0.964832, 0.999999, -3.06881e-06, 1.20589e-06, 3.49226e-06, 0.964832, -0.262864, 0.662643, 0.636706, -0.0430846)
+
+[node name="Round_Shield" parent="Player/Knight/Rig/Skeleton3D" index="3"]
+transform = Transform3D(4.89419e-08, 0.262864, 0.964832, 0.999999, -3.06881e-06, 1.20589e-06, 3.49226e-06, 0.964832, -0.262864, 0.662643, 0.636706, -0.0430846)
+
+[node name="Spike_Shield" parent="Player/Knight/Rig/Skeleton3D" index="4"]
+transform = Transform3D(4.89419e-08, 0.262864, 0.964832, 0.999999, -3.06881e-06, 1.20589e-06, 3.49226e-06, 0.964832, -0.262864, 0.662643, 0.636706, -0.0430846)
+
+[node name="1H_Sword" parent="Player/Knight/Rig/Skeleton3D" index="5"]
+transform = Transform3D(4.37053e-07, -0.149893, 0.988701, 0.999999, -9.21064e-07, -8.64267e-07, 1.3353e-06, 0.988702, 0.149894, -0.496054, 0.64103, 0.139528)
+
+[node name="2H_Sword" parent="Player/Knight/Rig/Skeleton3D" index="6"]
+transform = Transform3D(4.21314e-07, -0.149893, 0.988701, 0.999999, -9.35798e-07, -8.50581e-07, 1.34781e-06, 0.988702, 0.149894, -0.496054, 0.64103, 0.139528)
+
+[node name="Knight_Helmet" parent="Player/Knight/Rig/Skeleton3D" index="7"]
+transform = Transform3D(0.99972, -1.40145e-09, 0.0236468, 1.39343e-09, 1, 3.55687e-10, -0.0236468, -3.22638e-10, 0.99972, 4.69869e-07, 1.20229, -1.19779e-07)
+
+[node name="Knight_Cape" parent="Player/Knight/Rig/Skeleton3D" index="8"]
+transform = Transform3D(0.996275, -5.14962e-09, 0.0862354, 5.13044e-09, 1, 4.44078e-10, -0.0862354, 1.46374e-15, 0.996275, -1.63023e-08, 1.20229, -1.40136e-07)
+
 [node name="CameraPositionTarget" type="Node3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.5, -7.5)
 script = ExtResource("2_x2jyb")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Player"]
+path_height_offset = 0.15
 
 [node name="Skeleton1" parent="." instance=ExtResource("2_3hm56")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.01445, 0, -13.0979)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.324, 0, -14.9793)
+player_path = NodePath("../Player")
+
+[node name="Skeleton_Minion" parent="Skeleton1" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Skeleton1"]
+path_height_offset = 0.15
+
+[node name="Skeleton2" parent="." instance=ExtResource("2_3hm56")]
+transform = Transform3D(0.558049, 0, -0.829808, 0, 1, 0, 0.829808, 0, 0.558049, -36.2964, 0, 18.8764)
+player_path = NodePath("../Player")
+
+[node name="Skeleton_Minion" parent="Skeleton2" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Skeleton2"]
+path_height_offset = 0.15
+
+[node name="Skeleton3" parent="." instance=ExtResource("2_3hm56")]
+transform = Transform3D(0.813294, 0, 0.581853, 0, 1, 0, -0.581853, 0, 0.813294, -38.9654, 0, 16.8606)
+player_path = NodePath("../Player")
+
+[node name="Skeleton_Minion" parent="Skeleton3" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Skeleton3"]
+path_height_offset = 0.15
+
+[node name="Skeleton4" parent="." instance=ExtResource("2_3hm56")]
+transform = Transform3D(0.832757, 0, 0.553639, 0, 1, 0, -0.553639, 0, 0.832757, -37.7215, 0, 13.048)
+player_path = NodePath("../Player")
+
+[node name="Skeleton_Minion" parent="Skeleton4" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Skeleton4"]
+path_height_offset = 0.15
+
+[node name="Skeleton5" parent="." instance=ExtResource("2_3hm56")]
+transform = Transform3D(0.58208, 0, -0.813131, 0, 1, 0, 0.813131, 0, 0.58208, -60.2427, 0, 17.9544)
+player_path = NodePath("../Player")
+
+[node name="Skeleton_Minion" parent="Skeleton5" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Skeleton5"]
+path_height_offset = 0.15
+
+[node name="Skeleton6" parent="." instance=ExtResource("2_3hm56")]
+transform = Transform3D(0.95117, 0, -0.308668, 0, 1, 0, 0.308668, 0, 0.95117, -64.6438, 0, 19.7056)
+player_path = NodePath("../Player")
+
+[node name="Skeleton_Minion" parent="Skeleton6" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Skeleton6"]
+
+[node name="Skeleton7" parent="." instance=ExtResource("2_3hm56")]
+transform = Transform3D(-0.0605782, 0, 0.998163, 0, 1, 0, -0.998163, 0, -0.0605782, -64.6438, 0, 1.30217)
+player_path = NodePath("../Player")
+
+[node name="Skeleton_Minion" parent="Skeleton7" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Skeleton7"]
+
+[node name="Skeleton8" parent="." instance=ExtResource("2_3hm56")]
+transform = Transform3D(0.955901, 0, -0.29369, 0, 1, 0, 0.29369, 0, 0.955901, -64.6438, 0, -3.03263)
+player_path = NodePath("../Player")
+
+[node name="Skeleton_Minion" parent="Skeleton8" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Skeleton8"]
+
+[node name="Skeleton9" parent="." instance=ExtResource("2_3hm56")]
+transform = Transform3D(-0.28609, 0, -0.958203, 0, 1, 0, 0.958203, 0, -0.28609, -63.2334, 0, -19.0537)
+player_path = NodePath("../Player")
+
+[node name="Skeleton_Minion" parent="Skeleton9" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Skeleton9"]
+
+[node name="Skeleton10" parent="." instance=ExtResource("2_3hm56")]
+transform = Transform3D(-0.99218, 0, 0.124814, 0, 1, 0, -0.124814, 0, -0.99218, -66.3952, 0, -19.0537)
+player_path = NodePath("../Player")
+
+[node name="Skeleton_Minion" parent="Skeleton10" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Skeleton10"]
+
+[node name="Skeleton11" parent="." instance=ExtResource("2_3hm56")]
+transform = Transform3D(0.293239, 0, -0.956039, 0, 1, 0, 0.956039, 0, 0.293239, -46.802, 0, -19.0537)
+player_path = NodePath("../Player")
+
+[node name="Skeleton_Minion" parent="Skeleton11" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Skeleton11"]
 
 [node name="SkeletonBoss" parent="." instance=ExtResource("3_4v4sj")]
 transform = Transform3D(0.0316724, 0, 0.999498, 0, 1, 0, -0.999498, 0, 0.0316724, -83.2593, 0, -1.62851)
+player_path = NodePath("../Player")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_12o5k")
@@ -180,3 +310,27 @@ transform = Transform3D(-0.0133513, 0, -0.999911, 0, 1, 0, 0.999911, 0, -0.01335
 
 [editable path="Player"]
 [editable path="Player/Knight"]
+[editable path="Skeleton1"]
+[editable path="Skeleton1/Skeleton_Minion"]
+[editable path="Skeleton2"]
+[editable path="Skeleton2/Skeleton_Minion"]
+[editable path="Skeleton3"]
+[editable path="Skeleton3/Skeleton_Minion"]
+[editable path="Skeleton4"]
+[editable path="Skeleton4/Skeleton_Minion"]
+[editable path="Skeleton5"]
+[editable path="Skeleton5/Skeleton_Minion"]
+[editable path="Skeleton6"]
+[editable path="Skeleton6/Skeleton_Minion"]
+[editable path="Skeleton7"]
+[editable path="Skeleton7/Skeleton_Minion"]
+[editable path="Skeleton8"]
+[editable path="Skeleton8/Skeleton_Minion"]
+[editable path="Skeleton9"]
+[editable path="Skeleton9/Skeleton_Minion"]
+[editable path="Skeleton10"]
+[editable path="Skeleton10/Skeleton_Minion"]
+[editable path="Skeleton11"]
+[editable path="Skeleton11/Skeleton_Minion"]
+[editable path="SkeletonBoss"]
+[editable path="SkeletonBoss/Skeleton_Warrior"]
