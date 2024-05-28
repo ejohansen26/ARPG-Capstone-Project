@@ -6,21 +6,38 @@ const SPEED = 5.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+@onready var _nav_agent := $NavigationAgent3D as NavigationAgent3D
+
+func _ready():
+	set_animation_loops()
+	$Knight/AnimationPlayer.play("Idle")
+
 
 func _physics_process(delta):
-	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+	if _nav_agent.is_navigation_finished():
+		$Knight/AnimationPlayer.play("Idle")
+		return
+	var next_position := _nav_agent.get_next_path_position()
+	var offset := next_position - global_position
+	global_position = global_position.move_toward(next_position, delta * SPEED)
+	
+	offset.y = 0
+	look_at(global_position + offset, Vector3.UP)
 
-	move_and_slide()
+func set_target_position(target_position: Vector3):
+	_nav_agent.set_target_position(target_position)
+	var start_position := global_transform.origin
+	var optimize := true
+	var navigation_map := get_world_3d().get_navigation_map()
+	var path := NavigationServer3D.map_get_path(
+		navigation_map,
+		start_position,
+		target_position,
+		optimize)
+
+func set_animation_loops():
+	$Knight/AnimationPlayer.get_animation("Idle").loop_mode = true
+	$Knight/AnimationPlayer.get_animation("Walking_A").loop_mode = true

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0ah4u7ptingf"]
+
+[ext_resource type="PackedScene" uid="uid://i7vrckw4rpr8" path="res://assets/environment/assets/gltf/buildings/neutral/building_destroyed.gltf" id="1_uqgb4"]
+[ext_resource type="PackedScene" uid="uid://ce4dyvoxhawkb" path="res://assets/environment/assets/gltf/buildings/neutral/building_dirt.gltf" id="2_mgo4l"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3wofp"]
+height = 8.12354
+radius = 4.90906
+
+[node name="DestroyedBuilding" type="Node3D"]
+
+[node name="building_destroyed2" parent="." instance=ExtResource("1_uqgb4")]
+transform = Transform3D(6.5, 0, 0, 0, 6.5, 0, 0, 0, 6.5, 0, 0, 0)
+
+[node name="building_dirt2" parent="." instance=ExtResource("2_mgo4l")]
+transform = Transform3D(3.4205, 0, -0.741726, 0, 3.5, 0, 0.741726, 0, 3.4205, 0.969871, 0, 2.38583)
+
+[node name="CollisionArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.59339, 0)
+shape = SubResource("CylinderShape3D_3wofp")
