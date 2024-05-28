@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjrmbcqjnruka"]
+
+[ext_resource type="PackedScene" uid="uid://bl7sfv2j01lqb" path="res://assets/environment/assets/gltf/buildings/neutral/building_stage_A.gltf" id="1_mbdon"]
+[ext_resource type="PackedScene" uid="uid://mciv6o3vthy7" path="res://assets/environment/assets/gltf/decoration/props/barrel.gltf" id="2_r5oid"]
+[ext_resource type="PackedScene" uid="uid://edc8ow18dgam" path="res://assets/environment/assets/gltf/decoration/props/sack.gltf" id="3_aetvw"]
+[ext_resource type="PackedScene" uid="uid://c7cd711qwo0p" path="res://assets/environment/assets/gltf/decoration/props/target.gltf" id="4_7m8dp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0voo7"]
+height = 1.45092
+
+[node name="Junk" type="StaticBody3D"]
+
+[node name="building_stage_A2" parent="." instance=ExtResource("1_mbdon")]
+
+[node name="barrel2" parent="." instance=ExtResource("2_r5oid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.233365, 0, 0.280688)
+
+[node name="sack2" parent="." instance=ExtResource("3_aetvw")]
+transform = Transform3D(0.702538, 0, 0.711646, 0, 1, 0, -0.711646, 0, 0.702538, -0.093, 0, 0.436)
+
+[node name="target2" parent="." instance=ExtResource("4_7m8dp")]
+transform = Transform3D(0.900736, 0, -0.434367, 0, 1, 0, 0.434367, 0, 0.900736, -0.506155, 0, 0.159873)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0.0817457)
+shape = SubResource("CapsuleShape3D_0voo7")

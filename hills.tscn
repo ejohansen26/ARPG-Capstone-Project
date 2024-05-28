@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cybos5sse8i3m"]
+
+[ext_resource type="PackedScene" uid="uid://c1gyk36dk3s74" path="res://assets/environment/assets/gltf/decoration/nature/hills_A_trees.gltf" id="1_tjkce"]
+[ext_resource type="PackedScene" uid="uid://hseqqert5xil" path="res://assets/environment/assets/gltf/decoration/nature/hills_B_trees.gltf" id="2_sgq4x"]
+[ext_resource type="PackedScene" uid="uid://c6xtgueyfdg48" path="res://assets/environment/assets/gltf/decoration/nature/hills_C_trees.gltf" id="3_0nbx3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y2y6o"]
+size = Vector3(3.58673, 1.93213, 1.35938)
+
+[node name="Hills" type="StaticBody3D"]
+
+[node name="hills_A_trees2" parent="." instance=ExtResource("1_tjkce")]
+
+[node name="hills_B_trees2" parent="." instance=ExtResource("2_sgq4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14255, 0, 0.0433183)
+
+[node name="hills_C_trees2" parent="." instance=ExtResource("3_0nbx3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.36658, 0, -0.0614439)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0948181, 0.466064, 0.179688)
+shape = SubResource("BoxShape3D_y2y6o")

@@ -7,7 +7,7 @@
 height = 8.12354
 radius = 4.90906
 
-[node name="DestroyedBuilding" type="Node3D"]
+[node name="DestroyedBuilding" type="StaticBody3D"]
 
 [node name="building_destroyed2" parent="." instance=ExtResource("1_uqgb4")]
 transform = Transform3D(6.5, 0, 0, 0, 6.5, 0, 0, 0, 6.5, 0, 0, 0)
@@ -15,8 +15,6 @@ transform = Transform3D(6.5, 0, 0, 0, 6.5, 0, 0, 0, 6.5, 0, 0, 0)
 [node name="building_dirt2" parent="." instance=ExtResource("2_mgo4l")]
 transform = Transform3D(3.4205, 0, -0.741726, 0, 3.5, 0, 0.741726, 0, 3.4205, 0.969871, 0, 2.38583)
 
-[node name="CollisionArea" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.59339, 0)
 shape = SubResource("CylinderShape3D_3wofp")
