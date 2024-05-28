@@ -90,10 +90,10 @@ transform = Transform3D(1.6008e-08, 3.59611e-07, 0.999999, 0.959981, 0.280061, 2
 visible = false
 
 [node name="1H_Sword" parent="Knight/Rig/Skeleton3D" index="5"]
-transform = Transform3D(-2.90573e-07, 5.76203e-08, 0.999999, 0.217679, 0.97602, -2.28631e-08, -0.97602, 0.217679, 2.76638e-08, -0.490235, 0.944689, 0.384806)
+transform = Transform3D(-1.93715e-07, 8.74226e-08, 0.999999, 0.217679, 0.97602, -5.26654e-08, -0.97602, 0.217679, 7.23672e-08, -0.490235, 0.944689, 0.384806)
 
 [node name="2H_Sword" parent="Knight/Rig/Skeleton3D" index="6"]
-transform = Transform3D(-3.04259e-07, 5.76204e-08, 0.999999, 0.217679, 0.97602, -1.98839e-08, -0.97602, 0.217679, 1.4306e-08, -0.490235, 0.944689, 0.384806)
+transform = Transform3D(-2.07401e-07, 8.74226e-08, 0.999999, 0.217679, 0.97602, -4.96863e-08, -0.97602, 0.217679, 5.90094e-08, -0.490235, 0.944689, 0.384806)
 visible = false
 
 [node name="Knight_Helmet" parent="Knight/Rig/Skeleton3D" index="7"]
@@ -102,29 +102,29 @@ transform = Transform3D(1, 7.45058e-09, 1.98028e-11, -1.62829e-17, 1, -4.53628e-
 [node name="Knight_Cape" parent="Knight/Rig/Skeleton3D" index="8"]
 transform = Transform3D(1, 7.45058e-09, 1.98028e-11, -1.62844e-17, 1, -4.53628e-10, -1.98046e-11, 4.53629e-10, 1, 0.0326824, 1.16911, -1.40742e-07)
 
-[node name="MobDetector" type="Area3D" parent="."]
+[node name="HitDetector" type="Area3D" parent="."]
 
-[node name="CollisionLeftArm" type="CollisionShape3D" parent="MobDetector"]
+[node name="CollisionLeftArm" type="CollisionShape3D" parent="HitDetector"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.997668, 0, 0.978358)
 shape = SubResource("ConvexPolygonShape3D_fdpqj")
 
-[node name="CollisionRightArm" type="CollisionShape3D" parent="MobDetector"]
+[node name="CollisionRightArm" type="CollisionShape3D" parent="HitDetector"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.997668, 0, 0.978358)
 shape = SubResource("ConvexPolygonShape3D_flnaa")
 
-[node name="CollisionBody" type="CollisionShape3D" parent="MobDetector"]
+[node name="CollisionBody" type="CollisionShape3D" parent="HitDetector"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.997668, 0, 0.978358)
 shape = SubResource("ConvexPolygonShape3D_uoge0")
 
-[node name="CollisionHead" type="CollisionShape3D" parent="MobDetector"]
+[node name="CollisionHead" type="CollisionShape3D" parent="HitDetector"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.997668, 0, 0.978358)
 shape = SubResource("ConvexPolygonShape3D_5r44s")
 
-[node name="CollisionLeftLeg" type="CollisionShape3D" parent="MobDetector"]
+[node name="CollisionLeftLeg" type="CollisionShape3D" parent="HitDetector"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.997668, 0, 0.978358)
 shape = SubResource("ConvexPolygonShape3D_8jnbm")
 
-[node name="CollisionRightLeg" type="CollisionShape3D" parent="MobDetector"]
+[node name="CollisionRightLeg" type="CollisionShape3D" parent="HitDetector"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.997668, 0, 0.978358)
 shape = SubResource("ConvexPolygonShape3D_n7mvd")
 
